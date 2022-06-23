@@ -7,10 +7,12 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <!-- Шрифты -->
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Нормолайз -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -18,9 +20,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Подключение моих стилей -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
     <!--Шапка сайта-->
     <header class="header-border">
@@ -30,21 +32,21 @@
         <nav>
           <!--Навигация сайта-->
           <ul class="site-nav list">
-            <li class="item">
+            <li class="site-nav-item">
               <a href="./index.html" title="Студия" class="link current">Студия</a>
             </li>
-            <li class="item">
+            <li class="site-nav-item">
               <a href="./portfolio.html" title="Портфолио" class="link">Портфолио</a>
             </li>
-            <li class="item">
+            <li class="site-nav-item">
               <a href="" title="Контакты" class="link">Контакты</a>
             </li>
           </ul>
         </nav>
         <ul class="auth-nav list">
           <!--Контакты по сайту-->
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link-contact">
+          <li class="site-nav-item">
+            <a href="mailto:info@devstudio.com" class="site-nav-link-contact">
               <svg width="16" height="12" class="item-envelope">
                 <use
                   class="item-envelope-svg"
@@ -53,8 +55,8 @@
               >info@devstudio.com</a
             >
           </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link-contact"
+          <li class="site-nav-item">
+            <a href="tel:+380961111111" class="site-nav-link-contact"
               ><svg width="10" height="16" class="item-contact">
                 <use
                   class="item-contact-svg"
@@ -74,12 +76,12 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button type="button" class="button-hero">Заказать услугу</button>
+        <button type="button" class="button-hero" data-modal-open>Заказать услугу</button>
       </section>
       <!--Приемущество-->
       <section class="section">
         <div class="container">
-          <h2 class="display-none-advantage">Приемущество</h2>
+          <h2 class="visually-hidden">Приемущество</h2>
           <ul class="advantage-list list">
             <li class="advantage-item">
               <div class="advantage-svg-box">
@@ -181,55 +183,55 @@
               <div class="team-box">
                 <h3 class="team-people">Игорь Демьяненко</h3>
                 <p class="team-work">Product Designer</p>
-                <ul class="card-link-boxs">
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                <ul class="card-link-wrapper">
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-instagram_icon"></use>
                       </svg>
-                    </li>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://twitter.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://twitter.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-twitter_icon"></use>
                       </svg>
-                    </li>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-facebook_icon"></use>
                       </svg>
-                    </li>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-linkedin_icon"></use>
                       </svg>
-                    </li>
-                  </a>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -245,55 +247,55 @@
               <div class="team-box">
                 <h3 class="team-people">Ольга Репина</h3>
                 <p class="team-work">Frontend Developer</p>
-                <ul class="card-link-boxs">
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                <ul class="card-link-wrapper">
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-instagram_icon"></use>
                       </svg>
-                    </li>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://twitter.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://twitter.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-twitter_icon"></use>
                       </svg>
-                    </li>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-facebook_icon"></use>
                       </svg>
-                    </li>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-linkedin_icon"></use>
                       </svg>
-                    </li>
-                  </a>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -309,55 +311,55 @@
               <div class="team-box">
                 <h3 class="team-people">Николай Тарасов</h3>
                 <p class="team-work">Marketing</p>
-                <ul class="card-link-boxs">
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                <ul class="card-link-wrapper">
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-instagram_icon"></use>
                       </svg>
-                    </li>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://twitter.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://twitter.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-twitter_icon"></use>
                       </svg>
-                    </li>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-facebook_icon"></use>
                       </svg>
-                    </li>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <li class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-linkedin_icon"></use>
                       </svg>
-                    </li>
-                  </a>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -373,56 +375,56 @@
               <div class="team-box">
                 <h3 class="team-people">Михаил Ермаков</h3>
                 <p class="team-work">UI Designer</p>
-                <div class="card-link-boxs">
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div class="card-link-box">
+                <ul class="card-link-wrapper">
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-instagram_icon"></use>
                       </svg>
-                    </div>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://twitter.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://twitter.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-twitter_icon"></use>
                       </svg>
-                    </div>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-facebook_icon"></use>
                       </svg>
-                    </div>
-                  </a>
-                  <a
-                    class="card-link-boxes"
-                    href="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div class="card-link-box">
+                    </a>
+                  </li>
+                  <li class="card-link-box">
+                    <a
+                      class="card-link-boxes"
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg class="card-link-svg" width="20" ; height="20" ;>
                         <use href="./images/icons.svg#icon-linkedin_icon"></use>
                       </svg>
-                    </div>
-                  </a>
-                </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -433,49 +435,54 @@
       <section class="section">
         <div class="container">
           <h2 class="examples-work-title">Постоянные клиенты</h2>
-          <ul class="examples-boxs">
-            <a class="examples-link" href=""
-              ><li class="examples-box">
+          <ul class="examples-boxs list">
+            <li class="examples-box">
+              <a class="examples-link" href="">
                 <svg class="examples-svg" width="106" ; height="60" ;>
                   <use href="./images/icons.svg#icon-logo_company1"></use>
                 </svg>
-              </li>
-            </a>
-            <a class="examples-link" href=""
-              ><li class="examples-box">
+              </a>
+            </li>
+
+            <li class="examples-box">
+              <a class="examples-link" href="">
                 <svg class="examples-svg" width="106" ; height="60" ;>
                   <use href="./images/icons.svg#icon-logo_company2"></use>
                 </svg>
-              </li>
-            </a>
-            <a class="examples-link" href=""
-              ><li class="examples-box">
+              </a>
+            </li>
+
+            <li class="examples-box">
+              <a class="examples-link" href="">
                 <svg class="examples-svg" width="106" ; height="60" ;>
                   <use href="./images/icons.svg#icon-logo_company3"></use>
                 </svg>
-              </li>
-            </a>
-            <a class="examples-link" href=""
-              ><li class="examples-box">
+              </a>
+            </li>
+
+            <li class="examples-box">
+              <a class="examples-link" href="">
                 <svg class="examples-svg" width="106" ; height="60" ;>
                   <use href="./images/icons.svg#icon-logo_company4"></use>
                 </svg>
-              </li>
-            </a>
-            <a class="examples-link" href=""
-              ><li class="examples-box">
+              </a>
+            </li>
+
+            <li class="examples-box">
+              <a class="examples-link" href="">
                 <svg class="examples-svg" width="106" ; height="60" ;>
                   <use href="./images/icons.svg#icon-logo_company5"></use>
                 </svg>
-              </li>
-            </a>
-            <a class="examples-link" href=""
-              ><li class="examples-box">
+              </a>
+            </li>
+
+            <li class="examples-box">
+              <a class="examples-link" href="">
                 <svg class="examples-svg" width="106" ; height="60" ;>
                   <use href="./images/icons.svg#icon-logo_company6"></use>
                 </svg>
-              </li>
-            </a>
+              </a>
+            </li>
           </ul>
         </div>
       </section>
@@ -500,10 +507,10 @@
                 >
               </li>
               <li class="space-address">
-                <a class="link-contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="foote-link-contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
               <li class="space-address">
-                <a class="link-contact" href="tel:+380961111111">+38 096 111 11 11</a>
+                <a class="foote-link-contact" href="tel:+380961111111">+38 096 111 11 11</a>
               </li>
             </ul>
           </address>
@@ -511,57 +518,61 @@
         <div class="footer-social-box">
           <p class="footer-social-text">присоединяйтесь</p>
           <ul class="footer-link-boxs">
-            <a
-              class="footer-social-link"
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <li class="footer-link-box list">
-                <svg class="footer-social" width="20" height="20">
+            <li class="footer-link-box list">
+              <a
+                class="footer-social-link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer-social-svg" width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram_icon"></use>
                 </svg>
-              </li>
-            </a>
-            <a
-              class="footer-social-link"
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <li class="footer-link-box list">
-                <svg class="footer-social" width="20" height="20">
+              </a>
+            </li>
+
+            <li class="footer-link-box list">
+              <a
+                class="footer-social-link"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer-social-svg" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter_icon"></use>
                 </svg>
-              </li>
-            </a>
-            <a
-              class="footer-social-link"
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <li class="footer-link-box list">
-                <svg class="footer-social" width="20" height="20">
+              </a>
+            </li>
+
+            <li class="footer-link-box list">
+              <a
+                class="footer-social-link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer-social-svg" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook_icon"></use>
                 </svg>
-              </li>
-            </a>
-            <a
-              class="footer-social-link"
-              href="https://www.linkedin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <li class="footer-link-box list">
-                <svg class="footer-social" width="20" height="20">
+              </a>
+            </li>
+
+            <li class="footer-link-box list">
+              <a
+                class="footer-social-link"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="footer-social-svg" width="20" height="20">
                   <use href="./images/icons.svg#icon-linkedin_icon"></use>
                 </svg>
-              </li>
-            </a>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
