@@ -13,15 +13,16 @@
   --accent-txt-cl: #757575;
   --light-txt-cl-white: #ffffff;
   --address-text-cl: rgba(255, 255, 255, 0.6);
+  --button-text-color: #f5f4fa;
 
   /* Background colors */
 
   --main-bg-cl: #2196f3;
   --secondary-bg-cl: #ffffff;
-  --accent-bg-cl: ;
   --hiro-bg-cl: #c4c4c4;
   --btn-bg-cl-hiro: #188ce8;
   --bg-footer-soc-link: #afb1b8;
+  --bg-footer-soc: rgba(255, 255, 255, 0.1);;
   --bg-card-link-svg: #afb1b8;
   --bg-soc-logo-link: #f5f4fa;
   --bg-footer-cl: #2f303a;
@@ -33,17 +34,13 @@
   --bg-cards-information-box: rgba(33, 150, 243, 0.9);
 
   --time-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --time-hov-foc: 1000ms;
+  --time-hov-foc: 250ms;
   --outline-foc: none;
-  --brdr-rad-sm: ;
+  
 
-  --brdr-rad-crcl: ;
+
   --items: 3;
-  --indent: 60px;
-
-  /* цополнительный цвет фона */
-
-  --button-text-color: #f5f4fa;
+  --indent: 30px;
 }
 /* ------------------------------------------------------------------- */
 
@@ -113,6 +110,10 @@ p:last-child {
   overflow: hidden;
 }
 
+/* .card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+} */
+
 /* ===== Навигация ===== */
 
 /* логотип */
@@ -171,7 +172,7 @@ p:last-child {
   color: var(--secondary-txt-cl);
   outline: none;
 }
-.link.current::before {
+.link.current::after {
   content: '';
   display: block;
 
@@ -278,13 +279,8 @@ p:last-child {
   text-align: center;
 
   background-color: var(--hiro-bg-cl);
-
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/banner_overla_hero.jpg);
-  /*----------------- Почему нельзя зделать так?------------------------------- */
-  /* background-image: url(../images/banner_overla_hero.jpg);
-  background-color: rgba(47, 48, 58, 0.4); */
-
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -339,15 +335,14 @@ p:last-child {
 /* ----- Приемущество ----- */
 .advantage-list {
   display: flex;
+  gap: 30px;
 }
 
-.advantage-item {
+/* .advantage-item {
   width: calc((100%-30px) / 4);
-}
+} */
 
-.advantage-item + .advantage-item {
-  margin-left: 30px;
-}
+
 
 .advantage-title {
   font-size: inherit;
@@ -395,20 +390,17 @@ p:last-child {
 
 .occupation-list {
   display: flex;
+  gap: 30px;
   padding-left: 0;
 }
-.occupation-item + .occupation-item {
-  margin-left: 30px;
-}
-.occupation-item > .occupation-no-line {
-  display: block;
-}
-.team,
-.occupation-team {
-  background-color: var(--button-text-color);
+.occupation-item {
+  
 
-  margin-left: auto;
-  margin-right: auto;
+  background-color: var(--button-text-color);
+  background-size:cover;
+}
+.occupation-no-line {
+  display: block;
 }
 
 .team-box {
@@ -435,14 +427,13 @@ p:last-child {
 
 .team-list {
   display: flex;
+  gap: 30px;
   justify-content: center;
 }
 .team-img-foto {
   display: block;
 }
-.team-card + .team-card {
-  margin-left: 30px;
-}
+
 .team-card {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -492,6 +483,10 @@ p:last-child {
   justify-content: center;
 
   border-radius: 50%;
+
+  transition-property:  background-color;
+  transition-duration: var(--time-hov-foc);
+  transition-timing-function: var(--time-cubic);
 }
 
 .card-link-boxes:focus {
@@ -504,11 +499,11 @@ p:last-child {
   fill: var(--secondary-bg-cl);
 }
 
-.card-link-box:hover {
+.card-link-boxes:hover {
   background-color: var(--main-bg-cl);
 }
 
-.card-link-box:hover .card-link-svg {
+.card-link-boxes:hover .card-link-svg {
   fill: var(--secondary-bg-cl);
 }
 
@@ -622,7 +617,7 @@ p:last-child {
 .foote-link-contact:hover,
 .foote-link-contact:focus {
   color: var(--main-bg-cl);
-  outline: none;
+  outline: vap(--outline-foc);
 }
 
 .logo.logo-footer {
@@ -651,7 +646,7 @@ p:last-child {
   line-height: 1.14;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--light-txt-cl-white);
 }
 .footer-social-box {
   margin-left: 70px;
@@ -668,7 +663,7 @@ p:last-child {
   display: flex;
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-footer-soc);
   border-radius: 50%;
 
   justify-content: center;
@@ -690,6 +685,7 @@ p:last-child {
   background: var(--main-bg-cl);
   outline: none;
 }
+
 
 /* -----------------------------------Партфоле --------------------------------- */
 
@@ -730,7 +726,7 @@ p:last-child {
 .button-primary:hover,
 .button-primary:focus {
   background-color: var(--main-bg-cl);
-  color: #ffffff;
+  color: var(--light-txt-cl-white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -778,7 +774,7 @@ p:last-child {
 .list.list-cards {
   margin-left: 0;
   display: block;
-  width: calc((100% - var(--indent)) / var(--items));
+  /* width: calc((100% - var(--indent)) / var(--items)); */
 
   background-color: var(--secondary-bg-cl);
 
@@ -796,6 +792,15 @@ p:last-child {
   position: relative;
   overflow: hidden;
 }
+
+.contaent-cards-img {
+  display: block;
+
+  object-fit: contain;
+
+  background-color: var(--secondary-bg-cl);
+}
+
 .contaent-cards-information {
   position: absolute;
   top: 0;
@@ -830,12 +835,27 @@ p:last-child {
 .list.list-cards:hover .contaent-cards-information {
   transform: translate(0, 0);
 }
-.contaent-cards-img {
-  display: block;
-  height: 100%;
+
+/* ------------------------Окно мадальное ------------------------------------- */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
 
-  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.2);;
+}
 
-  background: #eeeeee;
+.modal {
+  position:absolute;
+  top:50%;
+  left: 50%;
+
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: var(--secondary-bg-cl);
+
+  transform: translate(-50%, -50%);  
 }
