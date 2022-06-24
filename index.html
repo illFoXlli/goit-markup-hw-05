@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-   <!-- Шрифты -->
+    <!-- Шрифты -->
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -82,7 +82,7 @@
       <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Приемущество</h2>
-          <ul class="advantage-list list card-set-item ">
+          <ul class="advantage-list list card-set-item">
             <li class="advantage-item">
               <div class="advantage-svg-box">
                 <svg class="advantage-svg" width="70" height="70">
@@ -143,6 +143,7 @@
                 width="370"
                 height="294"
               />
+              <div class="occupation-text-card">Десктопные приложения</div>
             </li>
             <li class="occupation-item card-set-item">
               <img
@@ -152,6 +153,7 @@
                 width="370"
                 height="294"
               />
+              <div class="occupation-text-card">Мобильные приложения</div>
             </li>
             <li class="occupation-item card-set-item">
               <img
@@ -161,6 +163,7 @@
                 width="370"
                 height="294"
               />
+              <div class="occupation-text-card">Дизайнерские решения</div>
             </li>
           </ul>
         </div>
@@ -180,6 +183,7 @@
                 width="270"
                 height="260"
               />
+
               <div class="team-box">
                 <h3 class="team-people">Игорь Демьяненко</h3>
                 <p class="team-work">Product Designer</p>
@@ -507,7 +511,9 @@
                 >
               </li>
               <li class="space-address">
-                <a class="foote-link-contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="foote-link-contact" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li class="space-address">
                 <a class="foote-link-contact" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -573,7 +579,70 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop"> <div class="modal"> </div> </div>
-    <script src="./js/modal.js"></script>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+
+        <div class="modal-icon-box" data-modal-close>
+          <svg class="modal-icon-close-svg" width="30" height="30">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+
+        <form class="form" name="signup_form" autocomplete="on" novalidate>
+          <div class="form-grup">
+            <label class="form-label">
+              Имя
+              <input type="text" name="name" placeholder="Денис Михайлович" autofocus />
+            </label>
+          </div>
+          <div class="form-grup">
+            <label class="form-label">
+              Почта
+              <input type="email" name="email" />
+            </label>
+          </div>
+
+          <div class="form-grup">
+            <label class="form-label">
+              Телефон
+              <input type="tel" name="tel" />
+            </label>
+          </div>
+          <div class="form-grup">
+            <label class="form-label">
+              Телефон
+              <input type="tel" name="tel" />
+            </label>
+          </div>
+
+          <div class="form-grup">
+            <label class="form-label">
+              Комментарий
+              <textarea name="comment" rows="5" placeholder="Введите текст"></textarea>
+            </label>
+
+            <label class="form-label-checkbox">
+              <input
+                class="form-checkbox"
+                type="checkbox"
+                name="agreement"
+                value="agreement"
+                checked
+              />
+              <p class="form-taxt-checkbox">
+                Соглашаюсь с рассылкой и принимаю
+                <a class="form-link-text" href="">Условия договора</a>
+              </p>
+            </label>
+          </div>
+          <div class="button-form-button">
+            <button class="button-hero" type="submit">Отправить</button>
+          </div>
+        </form>
+
+        <script src="./js/mobal.js"></script>
+      </div>
+    </div>
   </body>
 </html>
