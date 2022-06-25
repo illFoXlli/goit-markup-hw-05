@@ -307,6 +307,9 @@ p:last-child {
   background-color: var(--main-bg-cl);
   color: var(--light-txt-cl-white);
 
+  max-width: 250px;
+  min-width: 200px;
+  min-height: 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -899,7 +902,8 @@ p:last-child {
   border-radius: 4px;
 }
 
-.modal-icon-box {
+.modal-icon-box-link {
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
@@ -911,26 +915,25 @@ p:last-child {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
-  cursor: pointer;
-  
 }
 
-
-
-.modal-icon-close-svg{
-  fill:rgba(0, 0, 0, 0.1);
+.modal-icon-close-svg {
+  --color1: #fff;
+  --color2: rgba(0, 0, 0, 0.1);
+  --color3:  rgba(0, 0, 0, 0.1);
 }
 
-.modal-icon-close-svg:hover{
-fill:var(--main-bg-cl);
+.modal-icon-close-svg:hover,
+.modal-icon-close-svg:focus-visible
+ {
+  --color3:  #2196f3;
 }
 
-.modal-icon-close-svg:hover .modal-icon-box {
-   background-color: rgba(0, 0, 0, 1);
-  border: 1px solid rgba(0, 0, 0, 1);
+.modal-icon-box-link:focus-visible .modal-icon-close-svg {
+  --color3:  #2196f3;
+}
+.modal-icon-box-link:focus-visible {
+  outline-color: var(--main-bg-cl);
 }
 
 .modal-title {
@@ -945,6 +948,7 @@ fill:var(--main-bg-cl);
 .form {
   /* outline: 1px solid tomato; */
   width: 448px;
+  min-height: 501px;
   margin-left: auto;
   margin-right: auto;
 }
