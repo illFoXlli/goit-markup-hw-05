@@ -17,6 +17,7 @@
 
   /* Background colors */
 
+
   --main-bg-cl: #2196f3;
   --secondary-bg-cl: #ffffff;
   --hiro-bg-cl: #c4c4c4;
@@ -375,6 +376,10 @@ p:last-child {
   padding-top: 0;
 }
 
+.section.team{
+  background-color: #F5F4FA;
+}
+
 .team-titel,
 .occupation-titel,
 .examples-work-title {
@@ -671,7 +676,7 @@ p:last-child {
 
 .footer-link-boxs {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 /* соц сети в футоре */
@@ -912,12 +917,20 @@ p:last-child {
   cursor: pointer;
   
 }
+
+
+
 .modal-icon-close-svg{
   fill:rgba(0, 0, 0, 0.1);
 }
 
 .modal-icon-close-svg:hover{
 fill:var(--main-bg-cl);
+}
+
+.modal-icon-close-svg:hover .modal-icon-box {
+   background-color: rgba(0, 0, 0, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
 }
 
 .modal-title {
@@ -978,4 +991,21 @@ margin-bottom: 30px;
 .form-link-text {
   color: var( --main-bg-cl);
   text-decoration-line: underline;
+}
+
+.form-label{
+  position: relative;
+ 
+}
+
+.form-name-svg {
+  display: block;
+  outline: 1px solid tomato;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  /* transform: translate(8px, 11px); */
+}
+.form-name {
+  padding: 11px;
 }
