@@ -29,9 +29,9 @@
   --bg-occupation-card: rgba(47, 48, 58, 0.8);
   --bg-form-cl: #757575;
   /* checkbox-icon-color */
---bg-checkbox-icon-black:#212121;
---bg-checkbox-icon-white:#ffffff;
---bg-checkbox-icon-blue:#2196f3;
+  --bg-checkbox-icon-black: #212121;
+  --bg-checkbox-icon-white: #ffffff;
+  --bg-checkbox-icon-blue: #2196f3;
 
   /*--------------------- Other visuals vars------------- */
   --logo-cl-blakc: #000000;
@@ -41,7 +41,7 @@
   --bg-cards-information-box: rgba(33, 150, 243, 0.9);
 
   --time-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --time-hov-foc: 250ms;
+  --time-hov-foc: 1000ms;
   --outline-foc: none;
 
   --items: 3;
@@ -907,15 +907,19 @@ p:last-child {
   border-radius: 4px;
 }
 
-.modal-icon-box-link {
-  display: block;
+.modal-icon-box-button {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(-8px, 8px);
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 0;
+  margin: 0;
+  border-width: 0px;
+  /* border-color: rgba(0, 0, 0, 0.1); */
 
   width: 30px;
   height: 30px;
@@ -923,9 +927,13 @@ p:last-child {
 }
 
 .modal-icon-close-svg {
-  --color1: #fff;
+  --color1: rgba(0, 0, 0, 0.1);
   --color2: rgba(0, 0, 0, 0.1);
-  --color3: rgba(0, 0, 0, 0.1);
+  --color3: #212121;
+
+  transition-property: fill;
+  transition-duration: var(--time-hov-foc);
+  transition-timing-function: var(--time-cubic);
 }
 
 .modal-icon-close-svg:hover,
@@ -933,10 +941,10 @@ p:last-child {
   --color3: #2196f3;
 }
 
-.modal-icon-box-link:focus-visible .modal-icon-close-svg {
+.modal-icon-box-button:focus-visible .modal-icon-close-svg {
   --color3: #2196f3;
 }
-.modal-icon-box-link:focus-visible {
+.modal-icon-box-button:focus-visible {
   outline-color: var(--main-bg-cl);
 }
 
@@ -969,7 +977,6 @@ p:last-child {
 }
 
 .form-label-checkbox {
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -979,34 +986,55 @@ p:last-child {
 }
 
 .form-checkbox {
-  width: 16px;
-  height: 15px;
-  background-color: var(--main-bg-cl);
- opacity: 0;
+  opacity: 1;
 }
-
 .checkbox-icon {
-display: flex;
-  justify-content: center;
-  align-items: center;
-opacity: 1;
-
---color1:var(--bg-checkbox-icon-white);
---color2: var(--bg-checkbox-icon-white);
---color3: var(--bg-checkbox-icon-black);
-}
-.form-checkbox:checked  + .checkbox-icon
-{
---color1:var(--bg-checkbox-icon-blue);
---color2: var(--bg-checkbox-icon-white);
---color3: var(--bg-checkbox-icon-blue);
+  padding: 0;
+  margin: 0;
 }
 
 .form-taxt-checkbox {
-  
+  position: relative;
   color: var(--accent-txt-cl);
   margin-left: 7px;
-  /* outline: 1px solid tomato; */
+}
+
+.checkbox-icon-button:focus-visible > .checkbox-icon {
+  --color3: var(--bg-checkbox-icon-blue);
+}
+.checkbox-icon-button:focus-visible {
+  outline-color: var(--main-bg-cl);
+}
+/* .checkbox-icon-button:focus-within  ~ .form-taxt-checkbox > .checkbox-icon{
+  --color1: var(--bg-checkbox-icon-white);
+  --color2: var(--bg-checkbox-icon-white);
+  --color3: transparent;
+  
+
+
+
+} */
+.checkbox-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-133%, -51%);
+  --color1: var(--bg-checkbox-icon-white);
+  --color2: var(--bg-checkbox-icon-white);
+  --color3: var(--bg-checkbox-icon-black);
+
+}
+
+.checkbox-icon:focus {
+  --color1: var(--bg-checkbox-icon-white);
+  --color2: var(--bg-checkbox-icon-white);
+  --color3: var(--bg-checkbox-icon-black);
+}
+
+.checkbox-icon-button:checked ~ .form-taxt-checkbox > .checkbox-icon {
+  --color1: var(--bg-checkbox-icon-blue);
+  --color2: var(--bg-checkbox-icon-white);
+  --color3: var(--bg-checkbox-icon-blue);
 }
 
 .button-form-button {
@@ -1020,7 +1048,6 @@ opacity: 1;
 
 .form-label {
   position: relative;
-  
 }
 
 .form-name-svg {
@@ -1038,30 +1065,28 @@ opacity: 1;
   margin-top: 4px;
   padding: 12px 12px 12px 42px;
 
- transition-property: outline;
+  transition-property: outline;
   transition-duration: var(--time-hov-foc);
   transition-property: var(--time-cubic);
-
-
 }
-.form-input:focus-within{
+.form-input:focus-within {
   outline: var(--main-bg-cl) auto 1px;
 }
 
 .form-name-svg {
-   transition-property: fill;
+  transition-property: fill;
   transition-duration: var(--time-hov-foc);
   transition-property: var(--time-cubic);
 }
-.form-input:focus-within + .form-name-svg {
+.form-input:focus-within ~ .form-name-svg {
   fill: var(--main-bg-cl);
 }
 
 .form-input.comment {
-padding: 12px;
+  padding: 12px;
 }
 
 .form-grup:not(:last-child) {
-margin-bottom: 10px;
-/* outline: 1px solid olivedrab; */
+  margin-bottom: 10px;
+  /* outline: 1px solid olivedrab; */
 }
