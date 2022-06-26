@@ -963,6 +963,7 @@ p:last-child {
 }
 
 .form-label-checkbox {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -975,11 +976,40 @@ p:last-child {
   width: 16px;
   height: 15px;
   background-color: var(--main-bg-cl);
+ opacity: 0;
+}
+/* .form-svg-box {
+  display: flex;
+  box-sizing: content-box;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+} */
+.checkbox-icon {
+display: flex;
+  justify-content: center;
+  align-items: center;
+opacity: 1;
+
+--color1:#ffffff;
+--color2: #ffffff;
+--color3: #212121;
+}
+.form-checkbox:checked  + .checkbox-icon
+{
+--color1:#2196f3;
+--color2: #ffffff;
+--color3: #2196f3;
 }
 
 .form-taxt-checkbox {
+  
   color: var(--accent-txt-cl);
   margin-left: 7px;
+  /* outline: 1px solid tomato; */
 }
 
 .button-form-button {
