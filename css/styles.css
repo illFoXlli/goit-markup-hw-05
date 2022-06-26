@@ -15,7 +15,7 @@
   --address-text-cl: rgba(255, 255, 255, 0.6);
   --button-text-color: #f5f4fa;
 
-  /* Background colors */
+  /* ------------------Background colors ------------*/
 
   --main-bg-cl: #2196f3;
   --secondary-bg-cl: #ffffff;
@@ -28,7 +28,12 @@
   --bg-footer-cl: #2f303a;
   --bg-occupation-card: rgba(47, 48, 58, 0.8);
   --bg-form-cl: #757575;
-  /* Other visuals vars */
+  /* checkbox-icon-color */
+--bg-checkbox-icon-black:#212121;
+--bg-checkbox-icon-white:#ffffff;
+--bg-checkbox-icon-blue:#2196f3;
+
+  /*--------------------- Other visuals vars------------- */
   --logo-cl-blakc: #000000;
   --logo-cl-white: #ffffff;
   --logo-cl-secondary: #2196f3;
@@ -36,7 +41,7 @@
   --bg-cards-information-box: rgba(33, 150, 243, 0.9);
 
   --time-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --time-hov-foc: 250ms;
+  --time-hov-foc: 1000ms;
   --outline-foc: none;
 
   --items: 3;
@@ -869,7 +874,8 @@ p:last-child {
   background-color: rgba(0, 0, 0, 0.2);
 
   transition-property: opacity;
-  transition-duration: 1000ms;
+  transition-duration: var(--time-hov-foc);
+  transition-timing-function: var(--time-cubic);
 }
 
 .backdrop.is-hidden {
@@ -978,31 +984,22 @@ p:last-child {
   background-color: var(--main-bg-cl);
  opacity: 0;
 }
-/* .form-svg-box {
-  display: flex;
-  box-sizing: content-box;
-  justify-content: center;
-  align-items: center;
-  height: 16px;
-  width: 16px;
-  border: 2px solid #212121;
-  border-radius: 4px;
-} */
+
 .checkbox-icon {
 display: flex;
   justify-content: center;
   align-items: center;
 opacity: 1;
 
---color1:#ffffff;
---color2: #ffffff;
---color3: #212121;
+--color1:var(--bg-checkbox-icon-white);
+--color2: var(--bg-checkbox-icon-white);
+--color3: var(--bg-checkbox-icon-black);
 }
 .form-checkbox:checked  + .checkbox-icon
 {
---color1:#2196f3;
---color2: #ffffff;
---color3: #2196f3;
+--color1:var(--bg-checkbox-icon-blue);
+--color2: var(--bg-checkbox-icon-white);
+--color3: var(--bg-checkbox-icon-blue);
 }
 
 .form-taxt-checkbox {
@@ -1023,6 +1020,7 @@ opacity: 1;
 
 .form-label {
   position: relative;
+  
 }
 
 .form-name-svg {
@@ -1039,11 +1037,22 @@ opacity: 1;
   /* outline: 1px solid blue; */
   margin-top: 4px;
   padding: 12px 12px 12px 42px;
+
+ transition-property: outline;
+  transition-duration: var(--time-hov-foc);
+  transition-property: var(--time-cubic);
+
+
 }
 .form-input:focus-within{
   outline: var(--main-bg-cl) auto 1px;
 }
 
+.form-name-svg {
+   transition-property: fill;
+  transition-duration: var(--time-hov-foc);
+  transition-property: var(--time-cubic);
+}
 .form-input:focus-within + .form-name-svg {
   fill: var(--main-bg-cl);
 }
