@@ -41,7 +41,7 @@
   --bg-cards-information-box: rgba(33, 150, 243, 0.9);
 
   --time-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --time-hov-foc: 1000ms;
+  --time-hov-foc: 250ms;
   --outline-foc: none;
 
   --items: 3;
